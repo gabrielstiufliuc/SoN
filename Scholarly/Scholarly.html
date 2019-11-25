@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SoN Scholarly</title>
 </head>
+
 <body>
-    <article>
+    <article resource="#" typeof="schema:ScholarlyArticle">
         <header>
-            <h1>SoN</h1>
+            <h1 property="schema:name">SoN</h1>
+            <h2 role="doc-subtitle" property="schema:alternateName">Social network profile manager</h2>
         </header>
         <div role="contentinfo">
             <section typeof="sa:AuthorsList">
                 <h2>Authors</h2>
                 <ul>
                     <li typeof="sa:ContributorRole" property="schema:author">
-                        <span property="schema:author" typeof="schema:Person" resource="https://www.linkedin.com/in/dan-bizu-362973161/">
+                        <span property="schema:author" typeof="schema:Person"
+                            resource="https://www.linkedin.com/in/dan-bizu-362973161/">
                             <meta property="schema:giveName" content="Dan">
                             <meta property="schema:additionalGivenName" content="Alexandru">
                             <meta property="schema:familyName" content="Bizu">
                             <a href="https://www.linkedin.com/in/dan-bizu-362973161/">
                                 <span property="schma:name">Dan-Alexandru Bizu</span>
                             </a>
-                            <a href="#uaicfii" property="sa:roleAffiliation" resource="https://www.info.uaic.ro/">Faculty of Computer Science, Iasi</a>
+                            <a href="#uaicfii" property="sa:roleAffiliation"
+                                resource="https://www.info.uaic.ro/">Faculty of Computer Science, Iasi</a>
                             <ul>
                                 <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
                                     <a href="mailto:bizu.dan@gmail.com" property="schema:email">
@@ -34,13 +39,15 @@
                         </span>
                     </li>
                     <li typeof="sa:ContributorRole" property="schema:author">
-                        <span property="schema:author" typeof="schema:Person" resource="https://www.linkedin.com/in/gabriel-stiufliuc-615028117/">
+                        <span property="schema:author" typeof="schema:Person"
+                            resource="https://www.linkedin.com/in/gabriel-stiufliuc-615028117/">
                             <meta property="schema:giveName" content="Gabriel">
                             <meta property="schema:familyName" content="Stiufliuc">
                             <a href="https://www.linkedin.com/in/gabriel-stiufliuc-615028117/">
                                 <span property="schma:name">Gabriel Stiufliuc</span>
                             </a>
-                            <a href="#uaicfii" property="sa:roleAffiliation" resource="https://www.info.uaic.ro/">Faculty of Computer Science, Iasi</a>
+                            <a href="#uaicfii" property="sa:roleAffiliation"
+                                resource="https://www.info.uaic.ro/">Faculty of Computer Science, Iasi</a>
                             <ul>
                                 <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
                                     <a href="mailto:gabriel.stiufliuc6@gmail.com" property="schema:email">
@@ -76,6 +83,256 @@
                 </ul>
             </section>
         </div>
+        <section role="doc-appendix">
+            <h1>Appendix</h1>
+            <ol>
+                <li>Introduction</li>
+                <li>Project structure</li>
+                <li>Technologies</li>
+                <li>Server-client interaction</li>
+                <li>Application typology</li>
+                <li>Externam services</li>
+                <li>Data structures</li>
+            </ol>
+        </section>
+        <section role="doc-introduction">
+            <h2>Introduction</h2>
+            <dt>
+                What is required?
+            </dt>
+            <dd>
+                <ul>
+                    <li>
+                        Build a social networking web application able to gather user profiles from different platforms
+                        (
+                        like LinkedIn, Last.fm, Instagram, WordPress, etc.) to build and manage the social network for a
+                        certain user.
+                    </li>
+                    <li>
+                        The user can also interact through a web extension which can also offer friend suggestions based
+                        on
+                        other relevant data (
+                        for example person P is friend with you on Facebook but he/she also has a GitHub account, and
+                        you've
+                        also got an account. Would you like
+                        to add P in your GitHub circle?).
+                    </li>
+                    <li>
+                        There will also be available advanced search based on certain criteria
+                        (name, age, location, hobbies, etc.).
+                    </li>
+                    <li>
+                        Social graphs are available for download in FOAF format.
+                    </li>
+                    <li>
+                        There will also be available a preview of the graph in raster (PNG) and vectorial (SVG) format.
+                    </li>
+                    <li>
+                        Bonus: 3D Preview using WebGL.
+                    </li>
+                </ul>
+            </dd>
+        </section>
+
+        <section>
+            <h2>Project structure</h2>
+            <p>On a first quick view we imagined a flow for the user and decided that we need the following pages:</p>
+            <ul>
+                <li>
+                    A register page;
+                </li>
+                <li>
+                    Login page;
+                </li>
+                <li>
+                    Social profiles pages (where the logged user will enter his profiles from other social networking
+                    platforms);
+                </li>
+                <li>
+                    Graph page (where user can preview and download his social networking graph, and search other
+                    users).
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Technologies</h2>
+            <section typeof="sa:Concepts">
+                <h3 itemtype="http://schema.org/title">Front End</h3>
+                <section typeof="schema:SoftwareSourceCode">
+                    <h4 itemtype="http://schema.org/title">HTML</h4>
+                    <ul>
+                        <li typeof="schema:WebPage" role="doc-biblioentry" resource="http://semver.org/"
+                            property="schema:citation" id="some-id">
+                            <cite property="schema:name">
+                                <a href="https://en.wikipedia.org/wiki/HTML">HTML</a>
+                            </cite>, by
+                            <span property="schema:author" typeof="schema:Person">
+                                <span property="schema:givenName">Tim</span>
+                                <span property="schema:familyName">Berners-Lee</span>
+                            </span>; published in
+                            <time property="schema:datePublished" datatype="xsd:gYear" datetime="1980">1980</time>
+                            <span property="schema:potentialAction" typeof="schema:ReadAction">
+                                <meta property="schema:actionStatus" content="CompletedActionStatus">
+                                (accessed on
+                                <time property="schema:endTime" datatype="xsd:date" datetime="2018-10-30">
+                                    25 Oct 2019
+                                </time>)
+                            </span>.
+                        </li>
+
+                        <li itemtype="http://schema.org/ListItem">
+                            <p itemtype="http://schema.org/description">Hypertext Markup Language (HTML) is the standard
+                                markup
+                                language for creating web pages and web applications. With Cascading Style Sheets (CSS)
+                                and JavaScript,
+                                it forms a triad of cornerstone technologies for the World Wide Web</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4 itemtype="http://schema.org/title">CSS</h4>
+                    <ul>
+                        <li typeof="schema:WebPage" role="doc-biblioentry" resource="http://semver.org/"
+                            property="schema:citation" id="some-id">
+                            <cite property="schema:name">
+                                <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a>
+                            </cite>, by
+                            <span property="schema:author" typeof="schema:Person">
+                                <span property="schema:givenName">Håkon</span>
+                                <span property="schema:familyName">Wium-Lie</span>
+                            </span>; first proposed in
+                            <time property="schema:datePublished" datatype="xsd:gYear" datetime="1994">1994</time>
+                            <span property="schema:potentialAction" typeof="schema:ReadAction">
+                                <meta property="schema:actionStatus" content="CompletedActionStatus">
+                                (accessed on
+                                <time property="schema:endTime" datatype="xsd:date" datetime="2018-10-30">
+                                    25 Oct 2019
+                                </time>)
+                            </span>.
+                        </li>
+
+                        <li itemtype="http://schema.org/ListItem">
+                            <p itemtype="http://schema.org/description">Cascading Style Sheets (CSS) is a style sheet
+                                language used for
+                                describing the presentation of a document written in a markup language like HTML. CSS is
+                                a cornerstone
+                                technology of the World Wide Web, alongside HTML and JavaScript.</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4 itemtype="http://schema.org/title">JavaScript</h4>
+                    <ul>
+                        <li typeof="schema:WebPage" role="doc-biblioentry" resource="http://semver.org/"
+                            property="schema:citation" id="some-id">
+                            <cite property="schema:name">
+                                <a href="https://en.wikipedia.org/wiki/JavaScript">JS</a>
+                            </cite>, by
+                            <span typeof="schema:Organization"
+                                resource="https://en.wikipedia.org/wiki/National_Center_for_Supercomputing_Applications">
+                                <span property="schema:name">National Center for Supercomputing Applications</span>,
+                                <span property="schema:parentOrganization">
+                                    <span typeof="schema:Organization">
+                                        <span property="schema:name">University of Illinois at Urbana-Champaign</span>
+                                        —
+                                        <span property="schema:location" typeof="schema:Place">
+                                            <span property="schema:address" typeof="schema:PostalAddress">
+                                                <span property="schema:addressLocality">Urbana and Champaign</span>,
+                                                <span property="schema:addressRegion">Illinois</span>,
+                                                <span property="schema:addressCountry">U.S.</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>; published in
+                            <time property="schema:datePublished" datatype="xsd:gYear" datetime="1993">1993</time>
+                            <span property="schema:potentialAction" typeof="schema:ReadAction">
+                                <meta property="schema:actionStatus" content="CompletedActionStatus">
+                                (accessed on
+                                <time property="schema:endTime" datatype="xsd:date" datetime="2018-10-30">
+                                    25 Oct 2019
+                                </time>)
+                            </span>.
+                        </li>
+
+                        <li itemtype="http://schema.org/ListItem">
+                            <p itemtype="http://schema.org/description">JavaScript, often abbreviated as JS, is a
+                                high-level,
+                                interpreted programming language. It is a language which is also characterized as
+                                dynamic, weakly typed,
+                                prototype-based and multi-paradigm. Alongside HTML and CSS, JavaScript is one of the
+                                three core
+                                technologies of the World Wide Web.</p>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+
+            <section typeof="sa:Concepts">
+                <h3 property="schema:name">Back End</h3>
+                <section>
+                    <h4>MongoDB</h4>
+                </section>
+                <section>
+                    <h4>NodeJS</h4>
+                </section>
+            </section>
+
+            <section typeof="sa:Concepts">
+                <h3 property="schema:name">Version Control</h3>
+                <section>
+                    <h4 itemtype="http://schema.org/title">GitHub</h4>
+                    <ul>
+                        <li typeof="schema:WebPage" role="doc-biblioentry" resource="http://semver.org/"
+                            property="schema:citation" id="some-id">
+                            <cite property="schema:name">
+                                <a href="https://github.com/">GitHub</a>
+                            </cite>, by
+                            <span typeof="schema:Organization" resource="https://github.com/">
+                                <span property="schema:name">GitHub Inc.</span>,
+                                <span property="schema:parentOrganization">
+                                    <span typeof="schema:Organization">
+                                        <span property="schema:name"> Microsoft Corporation</span>
+                                        —
+                                        <span property="schema:location" typeof="schema:Place">
+                                            <span property="schema:address" typeof="schema:PostalAddress">
+                                                <span property="schema:addressLocality">San Francisco</span>,
+                                                <span property="schema:addressRegion">California</span>,
+                                                <span property="schema:addressCountry">U.S.</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>; started in
+                            <time property="schema:datePublished" datatype="xsd:gYear" datetime="2008">2008</time>
+                            <span property="schema:potentialAction" typeof="schema:ReadAction">
+                                <meta property="schema:actionStatus" content="CompletedActionStatus">
+                                (accessed on
+                                <time property="schema:endTime" datatype="xsd:date" datetime="2018-10-30">
+                                    23 Oct 2019
+                                </time>)
+                            </span>.
+                        </li>
+
+                        <li itemtype="http://schema.org/ListItem">
+                            <p itemtype="http://schema.org/description">GitHub Inc. is a web-based hosting service for
+                                version control
+                                using Git. It is mostly used for computer code. It offers all of the distributed version
+                                control and
+                                source code management (SCM) functionality of Git as well as adding its own features. It
+                                provides access
+                                control and several collaboration features such as bug tracking, feature requests, task
+                                management, and
+                                wikis for every project.</p>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </section>
     </article>
 </body>
+
 </html>
