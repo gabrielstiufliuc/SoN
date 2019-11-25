@@ -1,1 +1,4 @@
-# SoN
+SoN
+===
+### Cerinţă
+Se doreşte dezvoltarea unei aplicaţii Web de tip social networking care să permită "culegerea" de profile de utilizatori de pe diverse alte situri (precum LinkedIn, Last.fm, Instagram, WordPress etc.) în vederea realizării şi exploatării grafului reţelei sociale a unui anumit utilizator. Interactiunea cu utilizatorul se va putea realiza si pe baza unei extensii de navigator Web oferind facilităţi de sugerare a completării reţelei sociale la care participă utilizatorul în funcţie de datele obtinute (de exemplu, "Persoana P a fost găsită ca fiind prietena ta pe Facebook, dar are profil şi pe GitHub, unde şi tu ai cont. O adăugam în cercul tău de cunoştinţe ce au conturi pe GitHub?"). Se vor oferi şi facilităţi de căutare avansată a utilizatorilor pe baza unor criterii multiple (e.g., nume, vârstă, localizare geografică, hobby-uri etc.). Grafurile sociale procesate de aplicatie vor putea fi exportate in format FOAF (Friend Of A Friend). Se vor oferi vizualizari 2D de interes in format raster (PNG) si vectorial (SVG). Bonus: Realizarea de vizualizari 3D cu WebGL.
