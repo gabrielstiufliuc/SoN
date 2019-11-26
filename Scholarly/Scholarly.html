@@ -304,9 +304,68 @@
                 <h4 property="schema:name">Back End</h4>
                 <section id="mongodb">
                     <h5>MongoDB</h5>
+                    <ul>
+                        <li typeof="schema:WebPage" role="doc-biblioentry" resource="http://semver.org/"
+                            property="schema:citation">
+                            <cite property="schema:name">
+                                <a href="https://en.wikipedia.org/wiki/MongoDB">MongoDB</a>
+                            </cite>, by
+                            <span property="schema:author" typeof="schema:Organization">
+                                <span property="schema:name">MongoDB Inc.</span>
+                            </span>; published in
+                            <time property="schema:datePublished" datatype="xsd:gYear" datetime="2009">2009</time>
+                            <span property="schema:potentialAction" typeof="schema:ReadAction">
+                                <meta property="schema:actionStatus" content="CompletedActionStatus">
+                                (accessed on
+                                <time property="schema:endTime" datatype="xsd:date" datetime="2019-10-25">
+                                    25 Oct 2019
+                                </time>)
+                            </span>.
+                        </li>
+
+                        <li itemscope itemtype="http://schema.org/ListItem">
+                            <p itemscope itemtype="http://schema.org/description">MongoDB is a cross-platform
+                                document-oriented database program. Classified as a NoSQL database program, MongoDB uses
+                                JSON-like documents with schema. MongoDB is developed by MongoDB Inc. and licensed under
+                                the Server Side Public License (SSPL).
+                            </p>
+                        </li>
+                    </ul>
                 </section>
                 <section id="node">
                     <h5>NodeJS</h5>
+                    <ul>
+                        <li typeof="schema:WebPage" role="doc-biblioentry" resource="http://semver.org/"
+                            property="schema:citation">
+                            <cite property="schema:name">
+                                <a href="https://en.wikipedia.org/wiki/Node.js">NodeJS</a>
+                            </cite>, by
+                            <span property="schema:author" typeof="schema:Person">
+                                <span property="schema:givenName">Ryan</span>
+                                <span property="schema:familyName">Dahl</span>
+                            </span>; published in
+                            <time property="schema:datePublished" datatype="xsd:gYear" datetime="2009">2009</time>
+                            <span property="schema:potentialAction" typeof="schema:ReadAction">
+                                <meta property="schema:actionStatus" content="CompletedActionStatus">
+                                (accessed on
+                                <time property="schema:endTime" datatype="xsd:date" datetime="2019-10-25">
+                                    25 Oct 2019
+                                </time>)
+                            </span>.
+                        </li>
+
+                        <li itemscope itemtype="http://schema.org/ListItem">
+                            <p itemscope itemtype="http://schema.org/description">Node.js is an open-source,
+                                cross-platform, JavaScript runtime environment that executes JavaScript code outside of
+                                a browser. Node.js lets developers use JavaScript to write command line tools and for
+                                server-side scripting—running scripts server-side to produce dynamic web page content
+                                before the page is sent to the user's web browser. Consequently, Node.js represents a
+                                "JavaScript everywhere" paradigm, unifying web-application development around a
+                                single programming language, rather than different languages for server- and client-side
+                                scripts.
+                            </p>
+                        </li>
+                    </ul>
                 </section>
             </section>
 
@@ -371,20 +430,10 @@
 
         <section typeof="sa:Concepts" id="architecture">
             <h3 property="schema:name">Server-client interaction</h3>
-            <ul>
-                <li>
-                    <figure typeof="sa:Image">
-                        <img width="600" src="architecture.png" alt="Project architecture">
-                        <figcaption>A diagram representing the project architecture.</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure typeof="sa:Image">
-                        <img width="600" src="db-schema.png" alt="Database schema">
-                        <figcaption>Diagram representing the project database structure.</figcaption>
-                    </figure>
-                </li>
-            </ul>
+            <figure typeof="sa:Image">
+                <img width="600" src="architecture.png" alt="Project architecture">
+                <figcaption>A diagram representing the project architecture.</figcaption>
+            </figure>
         </section>
 
         <section typeof="sa:Concepts" id="typology">
@@ -395,6 +444,10 @@
         </section>
         <section typeof="sa:Concepts" id="data-structure">
             <h3 property="schema:name">Data structure</h3>
+            <figure typeof="sa:Image">
+                <img width="600" src="db-schema.png" alt="Database schema">
+                <figcaption>Diagram representing the project database structure.</figcaption>
+            </figure>
         </section>
     </article>
 </body>
