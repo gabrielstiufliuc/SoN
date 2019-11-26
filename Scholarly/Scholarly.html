@@ -389,9 +389,27 @@
 
         <section typeof="sa:Concepts" id="typology">
             <h3 property="schema:name">Application typology</h3>
+
+            <div>
+                Application typology is a SPA manually created with VanillaJS. We add "#" in each URL, so that we
+                parse the URL in order to see what to render. Each URL will be mapped to a controller and a template
+                that dynamically loaded.
+            </div>
         </section>
         <section typeof="sa:Concepts" id="external-services">
             <h3 property="schema:name">External services</h3>
+
+            <ul>
+                <li>Facebook Graph API</li>
+                <li>Twitter API</li>
+                <li>GitHub API</li>
+            </ul>
+
+            <div>
+                We are fetching data from each social network platform at a certain time (once per day) and populate
+                our Graphs table in our DB. We create for each user a Social Network graph in order to let the user to
+                visualize their SN connections
+            </div>
         </section>
         <section typeof="sa:Concepts" id="data-structure">
             <h3 property="schema:name">Data structure</h3>
