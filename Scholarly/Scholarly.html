@@ -16,7 +16,7 @@
         </header>
         <div role="contentinfo">
             <section typeof="sa:AuthorsList">
-                <h2>Authors</h2>
+                <h3>Authors</h3>
                 <ul>
                     <li typeof="sa:ContributorRole" property="schema:author">
                         <span property="schema:author" typeof="schema:Person"
@@ -25,7 +25,7 @@
                             <meta property="schema:additionalGivenName" content="Alexandru">
                             <meta property="schema:familyName" content="Bizu">
                             <a href="https://www.linkedin.com/in/dan-bizu-362973161/">
-                                <span property="schma:name">Dan-Alexandru Bizu</span>
+                                <span property="schma:name">Dan-Alexandru Bizu</span>,
                             </a>
                             <a href="#uaicfii" property="sa:roleAffiliation"
                                 resource="https://www.info.uaic.ro/">Faculty of Computer Science, Iasi</a>
@@ -44,7 +44,7 @@
                             <meta property="schema:giveName" content="Gabriel">
                             <meta property="schema:familyName" content="Stiufliuc">
                             <a href="https://www.linkedin.com/in/gabriel-stiufliuc-615028117/">
-                                <span property="schma:name">Gabriel Stiufliuc</span>
+                                <span property="schma:name">Gabriel Stiufliuc</span>,
                             </a>
                             <a href="#uaicfii" property="sa:roleAffiliation"
                                 resource="https://www.info.uaic.ro/">Faculty of Computer Science, Iasi</a>
@@ -60,7 +60,7 @@
                 </ul>
             </section>
             <section typeof="sa:Affiliations">
-                <h2>Affiliations</h2>
+                <h3>Affiliations</h3>
                 <ul>
                     <li id="uaicfii">
                         <span typeof="schema:Organization" resource="https://www.info.uaic.ro/">
@@ -84,19 +84,45 @@
             </section>
         </div>
         <section role="doc-appendix">
-            <h1>Appendix</h1>
+            <h2>Appendix</h2>
             <ol>
-                <li>Introduction</li>
-                <li>Project structure</li>
-                <li>Technologies</li>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#ps">Project structure</a></li>
+                <li>
+                    <a href="#tech">Technologies</a>
+                    <ul>
+                        <li>
+                            <a href="#fe">Front End</a>
+                            <ul>
+                                <li><a href="#html">HTML</a></li>
+                                <li><a href="#css">CSS</a></li>
+                                <li><a href="#js">JavaScript</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#be">Back End</a>
+                            <ul>
+                                <li><a href="#mongodb">Database - MongoDB</a></li>
+                                <li><a href="#node">Server - NodeJS</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#other">Other tools</a>
+                            <ul>
+                                <li><a href="#git">Version Control - GitHub</a></li>
+                                <li><a href="#ide">IDE - Visual Studio Code</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
                 <li>Server-client interaction</li>
                 <li>Application typology</li>
                 <li>Externam services</li>
                 <li>Data structures</li>
             </ol>
         </section>
-        <section role="doc-introduction">
-            <h2>Introduction</h2>
+        <section role="doc-introduction" id="intro">
+            <h3>Introduction</h3>
             <dt>
                 What is required?
             </dt>
@@ -134,8 +160,8 @@
             </dd>
         </section>
 
-        <section>
-            <h2>Project structure</h2>
+        <section id="ps">
+            <h3>Project structure</h3>
             <p>On a first quick view we imagined a flow for the user and decided that we need the following pages:</p>
             <ul>
                 <li>
@@ -155,15 +181,15 @@
             </ul>
         </section>
 
-        <section>
-            <h2>Technologies</h2>
+        <section id="tech">
+            <h3>Technologies</h3>
             <section typeof="sa:Concepts">
-                <h3 itemtype="http://schema.org/title">Front End</h3>
-                <section typeof="schema:SoftwareSourceCode">
-                    <h4 itemtype="http://schema.org/title">HTML</h4>
+                <h4 itemscope itemtype="http://schema.org/title" id="fe">Front End</h4>
+                <section typeof="schema:SoftwareSourceCode" id="html">
+                    <h5 itemscope itemtype="http://schema.org/title">HTML</h5>
                     <ul>
                         <li typeof="schema:WebPage" role="doc-biblioentry" resource="http://semver.org/"
-                            property="schema:citation" id="some-id">
+                            property="schema:citation">
                             <cite property="schema:name">
                                 <a href="https://en.wikipedia.org/wiki/HTML">HTML</a>
                             </cite>, by
@@ -175,14 +201,15 @@
                             <span property="schema:potentialAction" typeof="schema:ReadAction">
                                 <meta property="schema:actionStatus" content="CompletedActionStatus">
                                 (accessed on
-                                <time property="schema:endTime" datatype="xsd:date" datetime="2018-10-30">
+                                <time property="schema:endTime" datatype="xsd:date" datetime="2019-10-25">
                                     25 Oct 2019
                                 </time>)
                             </span>.
                         </li>
 
-                        <li itemtype="http://schema.org/ListItem">
-                            <p itemtype="http://schema.org/description">Hypertext Markup Language (HTML) is the standard
+                        <li itemscope itemtype="http://schema.org/ListItem">
+                            <p itemscope itemtype="http://schema.org/description">Hypertext Markup Language (HTML) is
+                                the standard
                                 markup
                                 language for creating web pages and web applications. With Cascading Style Sheets (CSS)
                                 and JavaScript,
@@ -191,11 +218,11 @@
                     </ul>
                 </section>
 
-                <section>
-                    <h4 itemtype="http://schema.org/title">CSS</h4>
+                <section id="css">
+                    <h5 itemscope itemtype="http://schema.org/title">CSS</h5>
                     <ul>
                         <li typeof="schema:WebPage" role="doc-biblioentry" resource="http://semver.org/"
-                            property="schema:citation" id="some-id">
+                            property="schema:citation">
                             <cite property="schema:name">
                                 <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a>
                             </cite>, by
@@ -207,14 +234,15 @@
                             <span property="schema:potentialAction" typeof="schema:ReadAction">
                                 <meta property="schema:actionStatus" content="CompletedActionStatus">
                                 (accessed on
-                                <time property="schema:endTime" datatype="xsd:date" datetime="2018-10-30">
+                                <time property="schema:endTime" datatype="xsd:date" datetime="2019-11-25">
                                     25 Oct 2019
                                 </time>)
                             </span>.
                         </li>
 
-                        <li itemtype="http://schema.org/ListItem">
-                            <p itemtype="http://schema.org/description">Cascading Style Sheets (CSS) is a style sheet
+                        <li itemscope itemtype="http://schema.org/ListItem">
+                            <p itemscope itemtype="http://schema.org/description">Cascading Style Sheets (CSS) is a
+                                style sheet
                                 language used for
                                 describing the presentation of a document written in a markup language like HTML. CSS is
                                 a cornerstone
@@ -223,11 +251,11 @@
                     </ul>
                 </section>
 
-                <section>
-                    <h4 itemtype="http://schema.org/title">JavaScript</h4>
+                <section id="js">
+                    <h5 itemscope itemtype="http://schema.org/title">JavaScript</h5>
                     <ul>
                         <li typeof="schema:WebPage" role="doc-biblioentry" resource="http://semver.org/"
-                            property="schema:citation" id="some-id">
+                            property="schema:citation">
                             <cite property="schema:name">
                                 <a href="https://en.wikipedia.org/wiki/JavaScript">JS</a>
                             </cite>, by
@@ -252,14 +280,15 @@
                             <span property="schema:potentialAction" typeof="schema:ReadAction">
                                 <meta property="schema:actionStatus" content="CompletedActionStatus">
                                 (accessed on
-                                <time property="schema:endTime" datatype="xsd:date" datetime="2018-10-30">
+                                <time property="schema:endTime" datatype="xsd:date" datetime="2019-11-25">
                                     25 Oct 2019
                                 </time>)
                             </span>.
                         </li>
 
-                        <li itemtype="http://schema.org/ListItem">
-                            <p itemtype="http://schema.org/description">JavaScript, often abbreviated as JS, is a
+                        <li itemscope itemtype="http://schema.org/ListItem">
+                            <p itemscope itemtype="http://schema.org/description">JavaScript, often abbreviated as JS,
+                                is a
                                 high-level,
                                 interpreted programming language. It is a language which is also characterized as
                                 dynamic, weakly typed,
@@ -271,20 +300,20 @@
                 </section>
             </section>
 
-            <section typeof="sa:Concepts">
-                <h3 property="schema:name">Back End</h3>
-                <section>
-                    <h4>MongoDB</h4>
+            <section typeof="sa:Concepts" id="be">
+                <h4 property="schema:name">Back End</h4>
+                <section id="mongodb">
+                    <h5>MongoDB</h5>
                 </section>
-                <section>
-                    <h4>NodeJS</h4>
+                <section id="node">
+                    <h5>NodeJS</h5>
                 </section>
             </section>
 
-            <section typeof="sa:Concepts">
-                <h3 property="schema:name">Version Control</h3>
-                <section>
-                    <h4 itemtype="http://schema.org/title">GitHub</h4>
+            <section typeof="sa:Item" id="other">
+                <h4 property="schema:name">Other tools</h4>
+                <section typeof="sa:Concepts" id="git">
+                    <h5 property="schema:name">Version Control - GitHub</h5>
                     <ul>
                         <li typeof="schema:WebPage" role="doc-biblioentry" resource="http://semver.org/"
                             property="schema:citation" id="some-id">
@@ -311,24 +340,31 @@
                             <span property="schema:potentialAction" typeof="schema:ReadAction">
                                 <meta property="schema:actionStatus" content="CompletedActionStatus">
                                 (accessed on
-                                <time property="schema:endTime" datatype="xsd:date" datetime="2018-10-30">
+                                <time property="schema:endTime" datatype="xsd:date" datetime="2019-10-23">
                                     23 Oct 2019
                                 </time>)
                             </span>.
                         </li>
 
-                        <li itemtype="http://schema.org/ListItem">
-                            <p itemtype="http://schema.org/description">GitHub Inc. is a web-based hosting service for
+                        <li itemscope itemtype="http://schema.org/ListItem">
+                            <p itemscope itemtype="http://schema.org/description">GitHub Inc. is a web-based hosting
+                                service for
                                 version control
-                                using Git. It is mostly used for computer code. It offers all of the distributed version
+                                using Git. It is mostly used for computer code. It offers all of the distributed
+                                version
                                 control and
-                                source code management (SCM) functionality of Git as well as adding its own features. It
+                                source code management (SCM) functionality of Git as well as adding its own
+                                features. It
                                 provides access
-                                control and several collaboration features such as bug tracking, feature requests, task
+                                control and several collaboration features such as bug tracking, feature requests,
+                                task
                                 management, and
                                 wikis for every project.</p>
                         </li>
                     </ul>
+                </section>
+                <section typeof="sa:Concepts" id="ide">
+                    <h5 property="schema:name">IDE - Visual Studio Code</h5>
                 </section>
             </section>
         </section>
