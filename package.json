@@ -1,0 +1,23 @@
+{
+  "name": "son",
+  "version": "1.0.0",
+  "description": "Social networking web application",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielstiufliuc/SoN.git"
+  },
+  "author": "Dan Bizu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gabrielstiufliuc/SoN/issues"
+  },
+  "homepage": "https://github.com/gabrielstiufliuc/SoN#readme",
+  "dependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
